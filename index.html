@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
+<title>MasterPro Plumbing Portland</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="MasterPro Plumbing — residential plumbers serving the Portland metro. Water heaters, drains, sewer, leaks, fixtures. Upfront pricing. Call 971-486-3255.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: bold local-service homepage. Full-bleed orange hero, Max standing in water ripples, floating trust card, white body with soft-orange icon cards, orange offer band, near-black contact band. */
+:root{
+  --bg:#FFFFFF; --tint:#FFF4EC; --ink:#121110; --ink-2:#5B554E; --line:#EFE8E2;
+  --orange:#FF6A13; --orange-hi:#FF8A3D; --orange-deep:#E65300; --dark:#121110; --card:#FFFFFF; --hot:#E0391F;
+  --shadow:0 24px 60px -28px rgba(18,17,16,.35);
+  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Manrope","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121110; --tint:#1C1611; --ink:#F7F3EF; --ink-2:#BBB3AA; --line:#2B2723;
+  --orange-deep:#FF8A3D; --card:#1A1816; --shadow:0 24px 60px -28px rgba(0,0,0,.7); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121110; --tint:#1C1611; --ink:#F7F3EF; --ink-2:#BBB3AA; --line:#2B2723;
+  --orange-deep:#FF8A3D; --card:#1A1816; --shadow:0 24px 60px -28px rgba(0,0,0,.7); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:.98;letter-spacing:-.035em;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,5vw,58px)}
+h3{letter-spacing:-.02em;line-height:1.1}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-deep)}
+.kicker::before{content:"";width:22px;height:3px;border-radius:3px;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:800 16.5px/1 var(--f-body);text-decoration:none;border-radius:999px;padding:17px 28px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:var(--orange-deep)}
+.btn-dark{background:#121110;color:#fff}
+.btn-white{background:#fff;color:#121110}
+.btn-ghost{border-color:currentColor;background:transparent}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #2F6FA8;outline-offset:3px}
+
+/* phone that calls for attention */
+.call svg{width:19px;height:19px;flex:none}
+@media (prefers-reduced-motion:no-preference){
+  .pulse{animation:pulse 1.5s ease-out infinite}
+  .pulse svg{animation:ring 1.5s ease-in-out infinite}
+}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,106,19,.7)}75%{box-shadow:0 0 0 18px rgba(255,106,19,0)}100%{box-shadow:0 0 0 0 rgba(255,106,19,0)}}
+.pulse-w{animation-name:pulsew}
+@keyframes pulsew{0%{box-shadow:0 0 0 0 rgba(255,255,255,.9)}75%{box-shadow:0 0 0 18px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+@keyframes ring{0%,45%,100%{transform:rotate(0)}5%,15%,25%{transform:rotate(-15deg)}10%,20%,30%{transform:rotate(15deg)}}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:7px;text-decoration:none}
+.logo-img{height:84px;margin-block:-8px;width:auto;max-width:230px;object-fit:contain;display:block;background:#fff;border-radius:8px}
+.logo .wm{display:none;font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:-.03em}
+.logo .wm em{font-style:normal;color:var(--orange)}
+.logo.nologo .logo-img{display:none}
+.logo.nologo .wm{display:inline}
+header nav{display:flex;gap:28px;font-weight:700;font-size:15px}
+header nav a{text-decoration:none;color:var(--ink-2)}
+header nav a:hover{color:var(--ink)}
+.hdr{display:flex;gap:10px;align-items:center}
+.hdr .btn{padding:13px 20px;font-size:15.5px}
+.hdr-call{white-space:nowrap}
+@media (max-width:1000px){header nav{display:none}}
+@media (max-width:600px){.hdr .btn-dark{display:none}.hdr-call{width:48px;height:48px;padding:0!important}.hdr-call .num{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.logo-img{height:64px;margin-block:-6px;max-width:180px}}
+
+/* hero */
+.hero{position:relative;background:var(--orange);color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 80% at 78% 45%,#FFB07A 0%,rgba(255,138,61,.55) 38%,rgba(255,106,19,0) 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:end;padding-block:72px 0}
+.hero-copy{padding-bottom:110px;min-width:0}
+.badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 16px 8px 10px;font-weight:700;font-size:14.5px}
+.badge i{width:10px;height:10px;border-radius:50%;background:#4BE07D;box-shadow:0 0 0 4px rgba(75,224,125,.25)}
+.hero h1{font-size:clamp(52px,7.6vw,104px);margin-top:22px}
+.hero h1 .hl{display:inline-block;background:#fff;color:var(--orange);padding:0 .14em .04em;border-radius:.16em;transform:rotate(-1.5deg)}
+.hero .sub{font-size:clamp(18px,1.6vw,21px);font-weight:600;margin:22px 0 0;max-width:30ch;opacity:.95}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .hcall{font:800 22px/1 var(--f-display);letter-spacing:-.01em;padding:18px 28px}
+.hero-art{position:relative;min-width:0;align-self:end}
+.ripples{position:absolute;left:50%;top:42%;width:122%;max-width:none;aspect-ratio:1/1;transform:translate(-50%,-50%);z-index:-1;pointer-events:none}
+.ripples circle,.ripples path{fill:none;stroke:#fff;stroke-linecap:round}
+@media (prefers-reduced-motion:no-preference){.ripples .spin{transform-origin:300px 300px;animation:spin 40s linear infinite}.ripples .spin2{transform-origin:300px 300px;animation:spin 60s linear infinite reverse}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-art{overflow:visible}
+.hero-art .slot{position:relative;aspect-ratio:3/4;max-height:620px;margin:0 auto}
+.hero-art .slot img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block;filter:drop-shadow(0 30px 40px rgba(120,40,0,.35))}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:40px 0}
+  .hero-copy{padding-bottom:0}
+  .hero-art{max-width:360px;width:100%;margin:12px auto 0}
+}
+
+/* floating trust card */
+.trust{position:relative;z-index:2;margin-top:-48px}
+.trust .card{background:var(--card);border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+.trust .item{padding:22px 24px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.trust .item + .item{border-left:1px solid var(--line)}
+.trust b{font-family:var(--f-display);font-weight:800;font-size:26px;letter-spacing:-.03em;color:var(--orange-deep)}
+.trust span{font-weight:700;font-size:15px;color:var(--ink-2);line-height:1.3}
+@media (max-width:860px){.trust{margin-top:0;padding-top:20px}.trust .card{grid-template-columns:1fr 1fr}.trust .item:nth-child(3){border-left:0}.trust .item:nth-child(n+3){border-top:1px solid var(--line)}}
+
+section.band{padding-block:96px}
+.tint{background:var(--tint)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px 40px;margin-bottom:44px}
+.head h2{margin-top:14px}
+.head p{color:var(--ink-2);margin:0;max-width:44ch;font-size:18px;font-weight:500}
+@media (max-width:760px){section.band{padding-block:64px}}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:1000px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.svc .ic{width:62px;height:62px;border-radius:18px;background:var(--tint);color:var(--orange);display:grid;place-items:center}
+.svc:hover .ic{background:var(--orange);color:#fff}
+.svc .ic svg{width:32px;height:32px}
+.svc .ic-img{display:block;overflow:hidden;width:108px;height:108px;border-radius:24px;background:#fff;padding:10px;border:1px solid var(--line)}
+.svc:hover .ic-img{background:#fff}
+.svc .ic-img img{width:100%;height:100%;object-fit:contain;display:block}
+.svc h3{font-size:26px}
+.svc ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.svc li{display:flex;gap:10px;font-weight:600;color:var(--ink-2)}
+.svc li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange);margin-top:10px;flex:none}
+.svc details{margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.svc summary{cursor:pointer;font-weight:800;color:var(--orange-deep);list-style:none;display:flex;align-items:center;justify-content:space-between}
+.svc summary::-webkit-details-marker{display:none}
+.svc summary::after{content:"+";font:800 22px/1 var(--f-display)}
+.svc details[open] summary::after{content:"–"}
+.svc details p{margin:10px 0 0;color:var(--ink-2);font-size:15.5px}
+.svc.emergency{background:#121110;color:#fff;border-color:#121110}
+.svc.emergency .ic{background:var(--hot);color:#fff}
+.svc.emergency li{color:#d9d2ca}
+.svc.emergency li::before{background:var(--hot)}
+.svc.emergency .em{margin:auto 0 4px;color:#bdb5ac;font-size:15px}
+
+/* offers */
+.offers-band{background:var(--orange);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.offers-band::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 70% at 10% 0%,#FF9A57 0%,rgba(255,106,19,0) 70%)}
+.offers-band .kicker{color:#fff}
+.offers-band .head p{color:#fff;opacity:.95}
+.offers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:1000px){.offers{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.offers{grid-template-columns:1fr}}
+.offer{position:relative;background:#fff;color:#121110;border-radius:22px;padding:26px 24px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.offer::before,.offer::after{content:"";position:absolute;top:64%;width:24px;height:24px;border-radius:50%;background:var(--orange)}
+.offer::before{left:-12px}.offer::after{right:-12px}
+.offer .big{font:800 56px/1 var(--f-display);letter-spacing:-.045em;color:#FF6A13}
+.offer strong{font-size:18px;line-height:1.25}
+.offer p{margin:0;color:#5B554E;font-size:15px;font-weight:500}
+.offer .code{margin-top:auto;padding-top:14px;border-top:2px dashed #EFE8E2;font-weight:800;font-size:13px;letter-spacing:.12em}
+.fine{font-size:13.5px;margin-top:20px;opacity:.9;max-width:90ch}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr;gap:32px}}
+.why-checks{margin:0!important;grid-template-columns:1fr 1fr!important}
+.why-checks li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;font-size:16.5px}
+@media (max-width:520px){.why-checks{grid-template-columns:1fr!important}}
+.checks{list-style:none;padding:0;margin:26px 0 32px;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+@media (max-width:520px){.checks{grid-template-columns:1fr}}
+.checks li{display:flex;gap:12px;font-weight:700;line-height:1.35}
+.checks li svg{width:24px;height:24px;flex:none;color:var(--orange)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.step{counter-increment:s;background:var(--card);border-radius:22px;padding:24px;border:1px solid var(--line)}
+.step::before{content:"0" counter(s);display:block;font:800 44px/1 var(--f-display);letter-spacing:-.04em;color:var(--orange);margin-bottom:16px}
+.step h3{font-size:21px;margin-bottom:6px}
+.step p{margin:0;color:var(--ink-2);font-size:15.5px}
+
+/* area */
+.area-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}
+@media (max-width:860px){.area-grid{grid-template-columns:1fr}}
+.area-grid p{color:var(--ink-2);max-width:40ch;font-size:18px}
+.towns{display:flex;flex-wrap:wrap;gap:10px}
+.towns span{border:1.5px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:700;font-size:15.5px;background:var(--bg)}
+.towns span.hq{background:var(--orange);border-color:var(--orange);color:#fff}
+
+/* faq */
+.faq{max-width:880px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:12px;padding:0 24px}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:800 19px/1.3 var(--f-display);letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:34px;height:34px;border-radius:50%;background:var(--tint);color:var(--orange);display:grid;place-items:center;font-size:22px}
+.faq details[open] summary::after{content:"–";background:var(--orange);color:#fff}
+.faq details p{margin:0 0 22px;color:var(--ink-2);max-width:70ch}
+
+/* contact */
+.contact{background:#121110;color:#fff}
+.contact .kicker{color:var(--orange-hi)}
+.contact-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.contact h2{color:#fff;margin-top:14px}
+.contact p{color:#c7bfb6;max-width:44ch;font-size:18px}
+.contact .big-call{font:800 clamp(28px,4.2vw,44px)/1 var(--f-display);letter-spacing:-.03em;padding:22px 34px;margin-top:10px}
+.contact .big-call svg{width:28px;height:28px}
+.contact .ctas{margin-top:22px}
+.contact-card{background:#1D1B19;border:1px solid #2B2723;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.contact-card .k{font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9a9188}
+.contact-card .v{font-weight:800;font-size:19px;word-break:break-word}
+.copy{font:800 12.5px var(--f-body);margin-left:8px;padding:5px 12px;border-radius:999px;border:1.5px solid #3a3632;background:transparent;color:#fff;cursor:pointer;vertical-align:2px}
+
+footer{background:#0A0908;color:#bdb5ac;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
+
+.callbar{display:none}
+@media (max-width:700px){
+  .callbar{display:grid;grid-template-columns:1.3fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:9;background:#121110;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));gap:10px}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;padding:14px;border-radius:999px;text-decoration:none}
+  .callbar .c{background:var(--orange);color:#fff}
+  .callbar .s{border:2px solid #fff;color:#fff}
+  footer{padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="MasterPro Plumbing home">
+      <img class="logo-img" src="images/logo.jpg" alt="MasterPro Plumbing" onerror="this.parentNode.classList.add('nologo')"><span class="wm">MasterPro <em>Plumbing</em></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#offers">Offers</a>
+      <a href="#why">Why us</a>
+      <a href="#area">Service area</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="hdr">
+      <a class="btn btn-dark js-book" href="#contact">Schedule now</a>
+      <a class="btn btn-orange call pulse hdr-call" href="tel:+19714863255" aria-label="Call 971-486-3255"><svg><use href="#i-phone"/></svg><span class="num">971-486-3255</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="badge"><i></i>Plumbers available today · Portland metro</span>
+        <h1>Plumbing <span class="hl">done right.</span><br>First visit.</h1>
+        <p class="sub">Upfront prices. Licensed plumbers. Trucks stocked to finish the job.</p>
+        <div class="ctas">
+          <a class="btn btn-white call pulse pulse-w hcall" href="tel:+19714863255"><svg><use href="#i-phone"/></svg>971-486-3255</a>
+          <a class="btn btn-dark js-book" href="#contact">Schedule now</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg class="ripples" viewBox="0 0 600 600" aria-hidden="true">
+          <circle cx="300" cy="300" r="120" stroke-width="2.5" opacity=".55"/>
+          <circle cx="300" cy="300" r="175" stroke-width="2.5" opacity=".42"/>
+          <circle cx="300" cy="300" r="230" stroke-width="2.5" opacity=".3"/>
+          <circle cx="300" cy="300" r="285" stroke-width="2.5" opacity=".18"/>
+          <g class="spin"><path d="M300 98 A202 202 0 0 1 494 245" stroke-width="12" opacity=".9"/><path d="M106 355 A202 202 0 0 1 150 165" stroke-width="12" opacity=".5"/></g>
+          <g class="spin2"><path d="M300 42 A258 258 0 0 0 70 180" stroke-width="7" opacity=".6"/><path d="M548 230 A258 258 0 0 1 470 495" stroke-width="7" opacity=".45"/></g>
+        </svg>
+        <div class="slot"><img src="images/max-hero.png" alt="Max, the MasterPro mascot, giving two thumbs up"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div class="card">
+        <div class="item"><b>Same day</b><span>Service across the Portland metro</span></div>
+        <div class="item"><b>Upfront</b><span>Flat-rate price before work starts</span></div>
+        <div class="item"><b>Licensed</b><span>Bonded &amp; insured in Oregon</span></div>
+        <div class="item"><b>Guaranteed</b><span>We stand behind every job</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="band" id="services">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="kicker">Our services</span><h2>What can we fix<br>for you today?</h2></div>
+        <p>From a dripping faucet to a new water heater. If it carries water or gas in your home, we handle it.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc">
+          <div class="ic ic-img"><img src="images/icon-kitchen-bath.png" alt="" loading="lazy"></div>
+          <h3>Kitchen &amp; Bath</h3>
+          <ul><li>Faucets &amp; sinks</li><li>Toilets &amp; bidets</li><li>Vanities</li><li>Garbage disposals</li></ul>
+          <details><summary>All kitchen &amp; bath services</summary><p>Shower valves, cartridges and trim · showerheads · tub spouts and drains · shut-off valves and supply lines · P-traps · dishwasher and ice maker hookups · reverse osmosis filters · instant hot water · pot fillers · laundry sinks · washer boxes.</p></details>
+        </article>
+        <article class="svc">
+          <div class="ic ic-img"><img src="images/icon-water-heater.png" alt="" loading="lazy"></div>
+          <h3>Water Heaters</h3>
+          <ul><li>Same-day tank replacement</li><li>Tankless installs</li><li>Heat pump water heaters</li><li>Repairs &amp; flushes</li></ul>
+          <details><summary>All water heater services</summary><p>Gas and electric tank heaters · tankless descaling · elements, thermostats, gas valves and T&amp;P valves · expansion tanks · seismic straps to Oregon code. Free in-home estimates on replacements.</p></details>
+        </article>
+        <article class="svc">
+          <div class="ic ic-img"><img src="images/icon-drains-sewer.png" alt="" loading="lazy"></div>
+          <h3>Drains &amp; Sewer</h3>
+          <ul><li>Clogged drains &amp; toilets</li><li>Main line clearing</li><li>Hydro jetting</li><li>Sewer camera inspection</li></ul>
+          <details><summary>All drain &amp; sewer services</summary><p>Sewer line spot repair · trenchless sewer replacement · cleanout installation · sump pumps and battery backups. Sewer repairs start with a camera inspection so you see the problem first.</p></details>
+        </article>
+        <article class="svc">
+          <div class="ic ic-img"><img src="images/icon-pipes-leaks.png" alt="" loading="lazy"></div>
+          <h3>Pipes &amp; Leaks</h3>
+          <ul><li>Leak detection &amp; repair</li><li>Whole-home repiping</li><li>Main shut-off &amp; PRVs</li><li>Backflow testing</li></ul>
+          <details><summary>All pipe &amp; water services</summary><p>Frost-free hose bibs · water softeners · whole-home filtration · remodel rough-in · plumbing and pre-purchase inspections. We replace old galvanized and polybutylene pipe with PEX or copper.</p></details>
+        </article>
+        <article class="svc">
+          <div class="ic ic-img"><img src="images/icon-gas-lines.png" alt="" loading="lazy"></div>
+          <h3>Gas Lines</h3>
+          <ul><li>New gas lines</li><li>Range &amp; dryer hookups</li><li>Gas leak repair</li><li>Fireplace &amp; BBQ lines</li></ul>
+          <details><summary>About gas work</summary><p>Every gas line is pressure tested before we leave. Smell gas? Leave the house first, then call your gas utility, then call us.</p></details>
+        </article>
+        <article class="svc emergency">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5"/><path d="M12 18h.01"/></svg></div>
+          <h3>Emergency Plumbing</h3>
+          <ul><li>Burst &amp; frozen pipes</li><li>Sewer backups</li><li>No hot water</li><li>Overflowing toilets</li></ul>
+          <p class="em">Shut off your main water valve, then call. We'll get someone out fast.</p>
+          <a class="btn btn-orange call pulse" href="tel:+19714863255"><svg><use href="#i-phone"/></svg>Call 971-486-3255</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band offers-band" id="offers">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="kicker">Today's offers</span><h2>Save on your<br>first visit.</h2></div>
+        <p>Mention the code when you call or add it to your online booking. We apply it before any work starts.</p>
+      </div>
+      <div class="offers">
+        <div class="offer"><div class="big">$50</div><strong>Off your first service</strong><p>New customers, any job of $250 or more.</p><div class="code">CODE · WELCOMEPDX</div></div>
+        <div class="offer"><div class="big">15%</div><strong>Fixture bundle</strong><p>Install 3 or more fixtures in one visit.</p><div class="code">CODE · BUNDLE3</div></div>
+        <div class="offer"><div class="big">$99</div><strong>Drain cleaning</strong><p>One accessible sink, tub or shower drain.</p><div class="code">CODE · DRAIN99</div></div>
+        <div class="offer"><div class="big">10%</div><strong>Seniors, military &amp; teachers</strong><p>Every visit, up to $150 off.</p><div class="code">CODE · THANKYOU</div></div>
+      </div>
+      <p class="fine">One offer per visit. Cannot be combined. Applies to labor; parts and permits not included. Residential customers in our service area.</p>
+    </div>
+  </section>
+
+  <section class="band" id="why">
+    <div class="wrap why-grid">
+      <div>
+        <span class="kicker">Why MasterPro</span>
+        <h2 style="margin-top:14px">Installers by trade. Plumbers by license.</h2>
+        <div class="ctas" style="margin-top:30px">
+          <a class="btn btn-orange js-book" href="#contact">Schedule now</a>
+          <a class="btn btn-ghost js-estimate" href="#contact">Free estimate</a>
+        </div>
+      </div>
+      <div>
+        <ul class="checks why-checks">
+          <li><svg><use href="#i-check"/></svg>Thousands of installs across the West Coast</li>
+          <li><svg><use href="#i-check"/></svg>Price approved before work starts</li>
+          <li><svg><use href="#i-check"/></svg>Trucks stocked to finish in one visit</li>
+          <li><svg><use href="#i-check"/></svg>Text alerts when we're on the way</li>
+          <li><svg><use href="#i-check"/></svg>Clean, respectful, on time</li>
+          <li><svg><use href="#i-check"/></svg>Free estimates on bigger projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint">
+    <div class="wrap">
+      <div class="head"><div><span class="kicker">How it works</span><h2>Booked in a minute.</h2></div></div>
+      <div class="steps">
+        <div class="step"><h3>Pick a time</h3><p>Book online or call. Choose the slot that works for you.</p></div>
+        <div class="step"><h3>Get a text</h3><p>We confirm your window and text when we're on the way.</p></div>
+        <div class="step"><h3>Approve the price</h3><p>Flat-rate price first. Nothing starts until you say yes.</p></div>
+        <div class="step"><h3>Done right</h3><p>We test, clean up and haul away the old parts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="area">
+    <div class="wrap area-grid">
+      <div>
+        <span class="kicker">Where we serve</span>
+        <h2 style="margin-top:14px">Portland metro, both sides of the river.</h2>
+        <p>Don't see your town? Call us. If we can get there, we will.</p>
+      </div>
+      <div class="towns">
+        <span class="hq">Portland</span><span>Beaverton</span><span>Hillsboro</span><span>Tigard</span><span>Tualatin</span><span>Lake Oswego</span><span>West Linn</span><span>Milwaukie</span><span>Happy Valley</span><span>Clackamas</span><span>Oregon City</span><span>Gresham</span><span>Troutdale</span><span>Sherwood</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="faq">
+    <div class="wrap">
+      <div class="head"><div><span class="kicker">Questions</span><h2>Good to know.</h2></div></div>
+      <div class="faq">
+        <details><summary>How much does a service call cost?</summary><p>Our diagnostic visit is $129, and it's credited toward the repair when you approve the work the same visit.</p></details>
+        <details><summary>Do you give the price before starting?</summary><p>Yes. Your plumber inspects the job and gives you a flat-rate price. Nothing starts until you approve it.</p></details>
+        <details><summary>I already bought my faucet or toilet. Can you install it?</summary><p>Yes. Most of our fixture installs are customer-supplied. We can also haul away the old fixture.</p></details>
+        <details><summary>Can you replace my water heater today?</summary><p>On most standard gas and electric tank heaters, yes. Tankless and heat pump installs start with a free in-home estimate.</p></details>
+        <details><summary>Do you pull permits?</summary><p>When the job requires one, we pull the permit and meet the inspector. City permit fees are billed at cost.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="kicker">Get in touch</span>
+        <h2>Need a plumber?<br>Call now.</h2>
+        <p>A real person answers. Prefer to book yourself? Pick a time online.</p>
+        <a class="btn btn-orange call pulse big-call" href="tel:+19714863255"><svg><use href="#i-phone"/></svg>971-486-3255</a>
+        <div class="ctas">
+          <a class="btn btn-white js-book" href="#contact">Schedule now</a>
+          <a class="btn btn-ghost js-estimate" href="#contact">Free estimate</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div><div class="k">Call or text</div><span class="v">971-486-3255</span><button class="copy" type="button" data-copy="971-486-3255">Copy</button></div>
+        <div><div class="k">Email</div><span class="v">plumbing.pdx@masterpro.app</span><button class="copy" type="button" data-copy="plumbing.pdx@masterpro.app">Copy</button></div>
+        <div><div class="k">Hours</div><span class="v">Mon–Sat 7am–7pm · Emergencies 24/7</span></div>
+        <div><div class="k">Service area</div><span class="v">Portland metro, Oregon</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MasterPro Plumbing · A MasterPro Home Services company · Portland, OR</span>
+    <span>Licensed, bonded &amp; insured · 971-486-3255 · plumbing.pdx@masterpro.app</span>
+  </div>
+</footer>
+
+<div class="callbar"><a class="c call pulse" href="tel:+19714863255"><svg width="18" height="18"><use href="#i-phone"/></svg>Call now</a><a class="s js-book" href="#contact">Schedule</a></div>
+
+<script>
+(function(){
+  var JOBBER_BOOKING_URL = 'https://clienthub.getjobber.com/hubs/edb98ec3-8523-4b2d-8159-154015b691f7/public/requests/5311759/new';
+  var JOBBER_ESTIMATE_URL = 'https://clienthub.getjobber.com/hubs/edb98ec3-8523-4b2d-8159-154015b691f7/public/requests/5311035/new';
+  document.querySelectorAll('.js-book').forEach(function(a){a.href=JOBBER_BOOKING_URL;a.target='_blank';a.rel='noopener'});
+  document.querySelectorAll('.js-estimate').forEach(function(a){a.href=JOBBER_ESTIMATE_URL;a.target='_blank';a.rel='noopener'});
+  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy');
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(b.previousElementSibling);var s=getSelection();s.removeAllRanges();s.addRange(r)};
+    try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+  })});
+})();
+</script>
+
+</body>
+</html>
